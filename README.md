@@ -170,4 +170,5 @@ $ !!
 d. Ulangi instruksi pada history bufer nomor 150
 $ !150
 e. Ulangi instruksi dengan prefix “ls”
+<img width="675" height="812" alt="image" src="https://github.com/user-attachments/assets/27047938-dc80-4a8d-abe4-3a34976201dd" />
 
