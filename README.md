@@ -1,8 +1,11 @@
 # TUGAS-6-SISTEM-OPERASI-SKU3A
-TUGAS 6 SISTEM OPERASI SKU3A
+**TUGAS-6-SISTEM-OPERASI-SKU3A**
 
-**Nama : Pasha Farelino
+**Nama:** Pasha Farelino
 
+**NIM:** 09011282530111
+
+**KELAS:** SKU3A
 
 1. Eksekusi seluruh profile yang ada :
 a. Edit file profile /etc/profile dan tampilkan pesan sebagai berikut :
@@ -51,15 +54,26 @@ echo “Profile dari .bash_profile”
 Lakukan hal yang sama untuk file lainnya, sesuaikan tampilan dengan nama file
 yang bersangkutan.
 
+<img width="463" height="172" alt="Screenshot From 2026-10-13 09-53-41" src="https://github.com/user-attachments/assets/10b95455-fcdb-446e-9f3a-481919b4b1cf" />
+
+<img width="818" height="86" alt="Screenshot From 2026-10-13 09-01-27" src="https://github.com/user-attachments/assets/5aa2c2e4-ffc4-424a-9f40-e380bc3c0466" />
+
 
 c. Jalankan instruksi subtitute user, kemudian keluar dengan perintah exit sebagai
 berikut:
 $ su mahasiswa
 $ exit
+<img width="445" height="94" alt="Screenshot From 2026-10-13 10-16-25" src="https://github.com/user-attachments/assets/4ccdc515-1965-4653-bfcc-72ea8c2242cf" />
+
 kemudian gunakan opsi – sebagai berikut :
 $ su – mahasiswa
 $ exit
 Jelaskan perbedaan kedua utilitas tersebut.
+<img width="460" height="154" alt="Screenshot From 2026-10-13 10-16-59" src="https://github.com/user-attachments/assets/e04f19f2-18e2-4396-a895-dcfc3b8a13d2" />
+
+su mahasiswa (Substitute User biasa): Berpindah user tanpa mengubah lingkungan shell (environment variables) atau direktori kerja saat itu. Anda akan tetap berada di direktori sebelumnya dan variabel PATH atau profil login user baru tidak dimuat sepenuhnya.
+
+su - mahasiswa (Login Shell): Berpindah user dengan menginisialisasi ulang seluruh lingkungan shell seolah-olah user tersebut baru saja melakukan login dari awal. Direktori kerja otomatis berpindah ke direktori $HOME user tersebut, dan seluruh file profil (.bash_profile, .profile, dll.) akan dieksekusi.
 
 
 2. Prompt String (PS)
@@ -68,6 +82,7 @@ dengan parameter nama variable tersebut, agar perubahan variable PS1 dikenal
 oleh semua shell
 PS1=’> ‘
 export PS1
+<img width="576" height="88" alt="Screenshot From 2026-10-13 10-19-28" src="https://github.com/user-attachments/assets/acece0fb-35dc-4827-a0ca-d716ab7b94e4" />
 
 
 b. Eksperimen hasil PS1 :
@@ -84,6 +99,9 @@ logout
 Echo “Terima kasih atas sesi yang diberikan”
 Sleep 5
 clear
+<img width="842" height="263" alt="Screenshot From 2026-10-13 10-27-37" src="https://github.com/user-attachments/assets/08129855-4f25-45c4-9e3d-e572e4a06949" />
+<img width="754" height="234" alt="Screenshot From 2026-10-13 10-37-00" src="https://github.com/user-attachments/assets/4688ef55-2abd-4db2-9dfb-d1eb479eba75" />
+
 
 4. Bash script
 a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :
@@ -101,6 +119,7 @@ $ ./p1.sh ; ./p3.sh ; ./p2.sh
 $ ./p1.sh &
 $ ./p1.sh $ ./p2.sh & ./p3.sh &
 $ ./p1.sh ; ./p3.sh ) &
+<img width="759" height="168" alt="Screenshot From 2026-10-13 10-44-29" src="https://github.com/user-attachments/assets/f57a981a-1cff-4628-a1ce-eed8d02be46f" />
 
 
 5. Jobs
@@ -112,21 +131,30 @@ do
 date >> hasil
 sleep 10
 done
+<img width="823" height="262" alt="Screenshot From 2026-10-13 10-57-36" src="https://github.com/user-attachments/assets/7a2a1f08-199c-46cb-aa50-78e6297d5d03" />
+
 
 b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di
 background sebagai berikut :
 $ jobs
 $ find / -print > files 2>/dev/null &
 $ jobs
+<img width="823" height="262" alt="Screenshot From 2026-10-13 10-58-58" src="https://github.com/user-attachments/assets/1618a694-c907-4d58-8355-87b33af8f330" />
+
 
 c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program
 tersebut ke background
 $ fg %1
 $ bg
+
+<img width="879" height="961" alt="Screenshot From 2026-10-13 10-56-14" src="https://github.com/user-attachments/assets/aba58df2-aad5-452a-b9f6-f2cb61ee3f16" />
+
 d. Stop program background dengan utilitas kill
 $ ps x
-$ kill [Nomor PID]
+<img width="851" height="824" alt="Screenshot From 2026-10-13 11-02-01" src="https://github.com/user-attachments/assets/176d4b0f-07ab-438d-9752-361f3a88a157" />
 
+$ kill [Nomor PID]
+<img width="587" height="54" alt="Screenshot From 2026-10-13 11-03-18" src="https://github.com/user-attachments/assets/afc436d6-38f0-419e-bfdd-b98fb33e07c6" />
 
 6. History
 a. Ganti nilai HISTSIZE dari 1000 menjadi 20
@@ -142,4 +170,4 @@ $ !!
 d. Ulangi instruksi pada history bufer nomor 150
 $ !150
 e. Ulangi instruksi dengan prefix “ls”
-$ !ls<img width="606" height="59" alt="Screenshot From 2026-10-13 08-47-18" src="https://github.com/user-attachments/assets/624a6958-96cd-4e57-a714-3295502dbd5a" />
+
